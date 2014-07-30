@@ -1,7 +1,7 @@
 get '/artist/:id' do
   # populate and array based on the number of events, sort by
   # most recent first. 
-  erb :'artist/:id'
+  erb :'artist/artist'
 end
 
 # post '/artist' do
