@@ -1,25 +1,30 @@
 # Event Page root
 
-get '/event' do 
+get '/artist/event' do 
   # @reviews = Review.all 
-  erb :'event/index'
+  erb :'artist/event/index'
 end
 
-get '/event/:id' do
+get '/artist/event' do
   
 end
 
-get '/event/review/new' do
-  # @event = Event.new
-  erb :'event/review/new'
+get '/artist/event/new' do
+
 end
 
-post '/event/new' do
-  # @event = Event.new(
-  #   date: params[:date],
-  #   venue: params [:venue],
-  #   artist_id: params[:artist_id]
-  #   )
+# get '/artist/event/review/new' do
+#   # @event = Event.new
+#   erb :'artist/event/review/new'
+# end
 
-  # redirect 'event/:id'
-end
+# post '/artist/event/review/new' do
+#   # @event = Event.new(
+#   #   date: params[:date],
+#   #   venue: params [:venue],
+#   #   artist_id: params[:artist_id]
+#   #   )
+
+#   # redirect 'event/:id'
+#   erb :'artist/event/review/new'
+# end
