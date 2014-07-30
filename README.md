@@ -7,7 +7,7 @@ Brought to you by Eubene Sa and Sunil Unka
 
 * Ruby
 * Sinatra
-* PostgreS
+* SQLite (for now...)  
 ...
 
 ## Getting up and running
