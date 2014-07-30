@@ -10,5 +10,6 @@ end
 get '/' do
   # Return a list of the most recent Instagram items (e.g.) #lollapalooza
   @tags = Instagram.tag_recent_media('lollapalooza')
+  
   erb :index
 end
