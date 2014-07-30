@@ -8,7 +8,7 @@ Instagram.configure do |config|
 end
 
 get '/' do
-  # Return a list of the most recent Instagram items hashtagged "concert"
-  @tags = Instagram.tag_recent_media('concert')
+  # Return a list of the most recent Instagram items (e.g.) #lollapalooza
+  @tags = Instagram.tag_recent_media('lollapalooza')
   erb :index
 end
