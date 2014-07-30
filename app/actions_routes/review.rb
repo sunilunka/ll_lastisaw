@@ -8,7 +8,7 @@ get '/artist/:id/event/:id/review/new' do
   erb :'artist/event/review/new'
 end
 
-post '/artist/event/review/new' do
+post '/artist/:id/event/:id/review/new' do
   # @event = Event.new(
   #   date: params[:date],
   #   venue: params [:venue],
@@ -16,5 +16,5 @@ post '/artist/event/review/new' do
   #   )
 
   # redirect 'event/:id'
-  erb :'artist/event/review/new'
+  # erb :'artist/event/review/new'
 end

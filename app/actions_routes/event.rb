@@ -1,6 +1,6 @@
 # Event Page root
 
-get '/artist/event' do 
+get '/artist/:id/event' do 
   # @reviews = Review.all 
   erb :'artist/event/index'
 end
@@ -9,7 +9,7 @@ get '/artist/event' do
   
 end
 
-get '/artist/event/new' do
+get '/artist/:id/event/new' do
 
 end
 
