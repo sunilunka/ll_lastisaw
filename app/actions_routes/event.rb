@@ -5,17 +5,21 @@ get '/event' do
   erb :'event/index'
 end
 
-get '/event/new' do
-  @event = Event.new
-  erb :'event/new'
+get '/event/:id' do
+  
+end
+
+get '/event/review/new' do
+  # @event = Event.new
+  erb :'event/review/new'
 end
 
 post '/event/new' do
-  @event = Event.new(
-    date: params[:date],
-    venue: params [:venue],
-    artist_id: params[:artist_id]
-    )
+  # @event = Event.new(
+  #   date: params[:date],
+  #   venue: params [:venue],
+  #   artist_id: params[:artist_id]
+  #   )
 
-  redirect 'event/'
+  # redirect 'event/:id'
 end
