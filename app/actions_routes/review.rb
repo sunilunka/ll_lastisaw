@@ -1,6 +1,6 @@
-get '/artist/:id/event/:id/review' do
-  erb :'artist/event/review'
-end
+# get '/artist/:id/event/:id/review' do
+#   erb :'artist/event/review'
+# end
 
 
 get '/artist/:id/event/:id/review/new' do
@@ -15,6 +15,6 @@ post '/artist/:id/event/:id/review/new' do
   #   artist_id: params[:artist_id]
   #   )
 
-  # redirect 'event/:id'
-  # erb :'artist/event/review/new'
+  redirect '/artist/:id/event/:id'
+  # erb :'artist/event/review/new
 end

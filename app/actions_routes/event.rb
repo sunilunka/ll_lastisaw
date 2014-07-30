@@ -5,7 +5,7 @@ get '/artist/:id/event' do
   erb :'artist/event/index'
 end
 
-get '/artist/event' do
+post '/artist/:id/event' do
   
 end
 
