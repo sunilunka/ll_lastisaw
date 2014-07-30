@@ -7,6 +7,9 @@ require 'active_support/all'
 require 'sinatra'
 require 'sinatra/activerecord'
 
+# Load Instagram
+require 'instagram'
+
 require 'pry'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -27,4 +30,4 @@ end
 require APP_ROOT.join('config', 'database')
 
 # Load the routes / actions
-require APP_ROOT.join('app', 'actions')
+require APP_ROOT.join('app/actions_routes', 'index')
