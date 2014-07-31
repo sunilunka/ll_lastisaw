@@ -9,11 +9,12 @@ get '/event/review/new' do
 end
 
 post '/event/review/new' do
-  # @event = Event.new(
-  #   date: params[:date],
-  #   venue: params [:venue],
-  #   artist_id: params[:artist_id]
-  #   )
+  
+  @event = Event.new(
+    date: params[:date],
+    event_id: params [:event_city],
+    artist_id: params[:artist_id]
+    )
 
   redirect '/artist/:id'
   # erb :'artist/event/review/new
