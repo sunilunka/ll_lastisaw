@@ -1,7 +1,11 @@
-  
+@mixin globalfont {
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 
-#review_form{
+
+
+  #review_form{
   position: relative;
   margin: 5% auto; 
   padding: 20px;

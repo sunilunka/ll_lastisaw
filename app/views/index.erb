@@ -1,16 +1,25 @@
-<div class="jumbotron">
-  <h1>Last I Saw</h1>
-  <p>
+
+  <header>
+    <h3 id="header-title">LastISaw</h3>
+  </header>
+<div id="middle-banner">
+  <h2>
     (Valuable) concert reviews by concertgoers (well, maybe a few by full-time music bloggers).
-  </p>
+  </h2>
   <p>
     <a href="/oauth/connect"><img src="http://i.imgur.com/Y8Sl7Ks.png"></a>
     <a href="/event/review/new" class="btn btn-primary btn-sm" role="button">Write a review</a>
   </p>
 </div>
 
+<!--<section id="description-box">
+  <header>
+    <h2>(Valuable) concert reviews by concertgoers (well, maybe a few by full-time music bloggers).</h2>
+  </header>
+</section>-->
+
 <% 3.times do |i| %>
-  <div>
+  <!--<div class="top-pics">
     <img src="<%= @tags[i].images.standard_resolution.url %>">
   </div>
 <% end %>

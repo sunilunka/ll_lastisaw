@@ -1,0 +1,77 @@
+/* home page specific styling */
+@mixin globalfont {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+body {
+  @include globalfont;
+  background-image: url('../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(186,71,100, 1);
+  text-align: center;
+  z-index: 100;
+  #header-title{
+    position: relative;
+    display: block; 
+    margin: 0 auto;
+    color: rgba(255,255,255, 0.75);
+    margin-top: 10px;
+
+
+  }
+  #header-title:hover {
+    color: rgba(255,255,255, 1); 
+  }
+}
+
+#middle-banner {
+  position: relative;
+  top: 250px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,1);
+  height: 160px;
+  h2 {
+    width: 50%;
+    margin: 0 auto;
+  }
+  p {
+    margin-top: 35px;
+  }
+
+}
+
+#description-box {
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
+  background-color: rgba(255,255,255,1);
+  text-align: center;
+  z-index: 10;
+
+}
+
+.event-pics {
+  position: relative;
+  display: inline-block;
+  width: 32%;
+  height: auto;
+  img {
+    height:auto;
+    width: 100%;  
+    border-radius: 100%;
+  }
+
+}

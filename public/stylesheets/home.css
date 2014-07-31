@@ -1,0 +1,58 @@
+/* home page specific styling */
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #ba4764;
+  text-align: center;
+  z-index: 100; }
+  header #header-title {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 10px; }
+  header #header-title:hover {
+    color: white; }
+
+#middle-banner {
+  position: relative;
+  top: 250px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  height: 160px; }
+  #middle-banner h2 {
+    width: 50%;
+    margin: 0 auto; }
+  #middle-banner p {
+    margin-top: 35px; }
+
+#description-box {
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  z-index: 10; }
+
+.event-pics {
+  position: relative;
+  display: inline-block;
+  width: 32%;
+  height: auto; }
+  .event-pics img {
+    height: auto;
+    width: 100%;
+    border-radius: 100%; }
