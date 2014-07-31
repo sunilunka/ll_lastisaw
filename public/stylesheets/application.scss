@@ -1,0 +1,31 @@
+  
+
+
+#review_form{
+  position: relative;
+  margin: 5% auto; 
+  padding: 20px;
+  width: 33%; 
+  height: auto;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 30px;
+  form {
+    margin: 0 auto;
+    text-align: center;
+    .form_fields {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      color: black;
+      label{
+         color: rgba(255,255,255,0.9);
+         font-size: 1.1em;
+      }
+      input {
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

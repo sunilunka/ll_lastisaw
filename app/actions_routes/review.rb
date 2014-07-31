@@ -1,20 +1,55 @@
-# get '/artist/:id/event/:id/review' do
-#   erb :'artist/event/review'
-# end
-
 
 get '/event/review/new' do
-  # @event = Event.new
+  @review = Review.new
   erb :'event/review/new'
 end
 
 post '/event/review/new' do
-  # @event = Event.new(
-  #   date: params[:date],
-  #   venue: params [:venue],
-  #   artist_id: params[:artist_id]
-  #   )
+  
+  find_artist = Artist.find_by name: params[:artist]
+  find_event = Event.find_by date: params[:date], city_name: params[:city_name]
 
-  redirect '/artist/:id'
-  # erb :'artist/event/review/new
+  
+  if find_artist
+    if find_event
+      @review = Review.create(
+        event_id: find_event.id,
+        review: params[:review]
+      )
+      redirect "/artist/#{find_artist.id}"
+
+    else
+      @event = Event.create(
+        date: params[:date],
+        city_name: params[:city_name],
+        artist_id: find_artist.id
+      )  
+
+      @review = Review.create(
+        event_id: @event.id,
+        review: params[:review]
+      )
+
+      redirect "/artist/#{find_artist.id}"
+
+    end
+
+  else
+    @artist = Artist.create(
+      name: params[:artist]
+    ) 
+
+    @event = Event.create(
+      date: params[:date],
+      city_name: params[:city_name],
+      artist_id: @artist.id
+    )
+
+    @review = Review.create(
+      event_id: @event.id,
+      review: params[:review]
+    )
+
+    redirect "/artist/#{@artist.id}"
+  end
 end
