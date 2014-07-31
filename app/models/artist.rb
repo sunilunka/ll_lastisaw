@@ -4,5 +4,5 @@ class Artist < ActiveRecord::Base
 
   # Associations
   has_many :events
-  has_many :reviews  
+  has_many :reviews, through: :events  
 end

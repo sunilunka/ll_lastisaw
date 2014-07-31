@@ -4,5 +4,5 @@ class Review < ActiveRecord::Base
 
   # Associations
   belongs_to :event
-  belongs_to :artist
+  # belongs_to :artist
 end

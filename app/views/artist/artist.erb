@@ -1,1 +1,23 @@
-<h1>I'm an artist.</h1>
+<h1><%= @artist.name %></h1>
+<% 3.times do |i| %>
+  <div>
+    <img src="<%= @tags[i].images.standard_resolution.url %>">
+  </div>
+<% end %>
+
+<% @events.each do |event| %>
+  <div>
+    <div>
+      <h2><%= event.city_name %></h2>
+      <h4><%= event.date.strftime("%a %-d %b %Y") %></h4>
+
+      <% event.reviews.order(created_at: :desc).each do |r| %>
+        <div>
+          <h5><%= r.review %></h5>
+          <small>Posted at <%= r.created_at.localtime.strftime("%l:%M%P") %> on <%= r.created_at.localtime.strftime("%a %-d %b %Y") %></small>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+<% end %>

@@ -23,3 +23,18 @@ Ideally, you should have at least 3 tabs open in your CLI for debugging. Run the
 1. `bundle exec shotgun -p 3000 -o 0.0.0.0`  
 2. `bundle exec pry -r './config/environment.rb'`  
 3. `sqlite3 db/db.sqlite3`  
+
+## Seeding data into DB
+
+For now, use the following in `pry`:  
+1.
+
+    100.times do
+      Event.create(date: Time.at(Random.new.rand(-487270800..1311490800)).to_date, city_name: "#{Faker::Address.city}", artist_id: Random.new.rand(1..100))
+    end  
+
+2.
+  
+    100.times do
+      Review.create(review: Faker::Lorem.characters(255), event_id: Random.new.rand(1..100))
+    end  

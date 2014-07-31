@@ -9,10 +9,10 @@
   </p>
 </div>
 
-<div>
-  <% 3.times do |i| %>
+<% 3.times do |i| %>
+  <div>
     <img src="<%= @tags[i].images.standard_resolution.url %>">
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <a href="/event/review/new">Add a review</a>

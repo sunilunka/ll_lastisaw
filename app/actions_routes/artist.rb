@@ -1,23 +1,6 @@
 get '/artist/:id' do
-  # populate and array based on the number of events, sort by
-  # most recent first. 
+  @artist = Artist.find(params[:id])
+  @events = @artist.events.order(date: :desc)
+  @tags = Instagram.tag_recent_media("#{@artist.name.downcase.gsub(/[\W_]/,"")}")
   erb :'artist/artist'
 end
-
-# post '/artist' do
-#   # @artist = Artist.where("artist = ?", params[:artist])
-#   # if @artist[0]
-#   #   redirect "/artist/#{@artist[0].id}"
-#   # else
-#   #   redirect '/artist/new'
-#   # end
-# end
-
-# get '/artist/new' do
-#   erb :'/artist/new'
-# end
-
-# post '/artist/new' do
-#   erb :'/artist/new'
-# end
-
