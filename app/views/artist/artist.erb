@@ -1,14 +1,15 @@
-
-<h1><%= @artist.name %></h1>
+<div id="artist_bg">
+</div>
+<h1 class="artist-title"><%= @artist.name %></h1>
 <% 3.times do |i| %>
-  <div>
+  <div class="artist-pic">
     <img src="<%= @tags[i].images.standard_resolution.url %>">
   </div>
 <% end %>
 
 <% @events.each do |event| %>
   <div>
-    <div>
+    <div class="artist">
       <h2><%= event.city_name %></h2>
       <h4><%= event.date.strftime("%a %-d %b %Y") %></h4>
       <% event.reviews.order(created_at: :desc).each do |r| %>

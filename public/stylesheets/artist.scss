@@ -1,3 +1,28 @@
-.artist-pic {
+#artist_bg {
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.95)
+}
+
   
+.artist-title {
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 0px 60px 0px;
+  text-align: center;
+  font-size: 4em;
+}
+
+.artist-pic {
+   position: relative;
+   display: inline-block;
+   width: 33%;
+   text-align: center;
+  img {
+    height: auto;
+    width: 50%;
+    border-radius: 100%;
+  }   
 }
