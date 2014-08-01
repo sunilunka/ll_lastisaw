@@ -7,6 +7,9 @@ body {
   @include globalfont;
   background-image: url('../assets/bg.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #middle-banner {
@@ -17,7 +20,6 @@ body {
   color: rgba(255,255,255,1);
   height: 160px;
   h2 {
-    width: 50%;
     margin: 0 auto;
   }
   p {
