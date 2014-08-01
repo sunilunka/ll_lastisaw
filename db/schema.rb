@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731015051) do
+ActiveRecord::Schema.define(version: 20140731214637) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -34,8 +34,17 @@ ActiveRecord::Schema.define(version: 20140731015051) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "event_id"
+    t.integer  "user_id"
   end
 
   add_index "reviews", ["event_id"], name: "index_reviews_on_event_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.string   "insta_username"
+    t.string   "insta_access_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
