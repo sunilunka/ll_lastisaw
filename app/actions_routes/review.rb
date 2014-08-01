@@ -14,7 +14,8 @@ post '/event/review/new' do
     if find_event
       @review = Review.create(
         event_id: find_event.id,
-        review: params[:review]
+        review: params[:review],
+        user_id: current_user.id
       )
       redirect "/artist/#{find_artist.id}"
 
@@ -27,7 +28,8 @@ post '/event/review/new' do
 
       @review = Review.create(
         event_id: @event.id,
-        review: params[:review]
+        review: params[:review],
+        user_id: current_user.id
       )
 
       redirect "/artist/#{find_artist.id}"
@@ -47,7 +49,8 @@ post '/event/review/new' do
 
     @review = Review.create(
       event_id: @event.id,
-      review: params[:review]
+      review: params[:review],
+      user_id: current_user.id
     )
 
     redirect "/artist/#{@artist.id}"

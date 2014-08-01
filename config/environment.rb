@@ -10,6 +10,12 @@ require 'sinatra/activerecord'
 # Load additional gems
 require 'instagram'
 
+# Configure Instagram Client ID and Client Secret
+Instagram.configure do |config|
+  config.client_id = "7e7a57487ca642278dd50158878e7aae"
+  config.client_secret = "b44a0e786426401e97d54e92519f0f28"
+end
+
 require 'faker'
 require 'pry'
 
@@ -31,10 +37,9 @@ end
 require APP_ROOT.join('config', 'database')
 
 # Load the routes / actions
+require APP_ROOT.join('app', 'helpers')
+
 require APP_ROOT.join('app/actions_routes', 'index')
-
-require APP_ROOT.join('app/actions_routes', 'event')
-
 require APP_ROOT.join('app/actions_routes', 'artist')
-
+require APP_ROOT.join('app/actions_routes', 'event')
 require APP_ROOT.join('app/actions_routes', 'review')
