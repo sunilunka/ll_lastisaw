@@ -1,45 +1,42 @@
-
-get '/event/review/new' do
+get '/review/new' do
   @review = Review.new
-  erb :'event/review/new'
+  erb :'/review/new'
 end
 
-post '/event/review/new' do
-  
-  find_artist = Artist.find_by name: params[:artist]
-  find_event = Event.find_by date: params[:date], city_name: params[:city_name]
+post '/review/new' do
+  find_artist = Artist.find_by(name: params[:artist])
+  find_event = Event.find_by(date: params[:date], city_name: params[:city_name])
 
-  
   if find_artist
     if find_event
-      @review = Review.create(
+      @review = Review.new(
         event_id: find_event.id,
         review: params[:review],
-        user_id: current_user.id
       )
-      redirect "/artist/#{find_artist.id}"
+      @review.user_id = current_user.id if current_user
+      @review.save
 
+      redirect "/artist/#{find_artist.id}"
     else
       @event = Event.create(
         date: params[:date],
         city_name: params[:city_name],
         artist_id: find_artist.id
-      )  
-
-      @review = Review.create(
-        event_id: @event.id,
-        review: params[:review],
-        user_id: current_user.id
       )
 
+      @review = Review.new(
+        event_id: @event.id,
+        review: params[:review],
+      )
+      @review.user_id = current_user.id if current_user
+      @review.save
+
       redirect "/artist/#{find_artist.id}"
-
     end
-
   else
     @artist = Artist.create(
       name: params[:artist]
-    ) 
+    )
 
     @event = Event.create(
       date: params[:date],
@@ -47,11 +44,12 @@ post '/event/review/new' do
       artist_id: @artist.id
     )
 
-    @review = Review.create(
+    @review = Review.new(
       event_id: @event.id,
       review: params[:review],
-      user_id: current_user.id
     )
+    @review.user_id = current_user.id if current_user
+    @review.save
 
     redirect "/artist/#{@artist.id}"
   end

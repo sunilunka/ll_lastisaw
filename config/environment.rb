@@ -40,6 +40,6 @@ require APP_ROOT.join('config', 'database')
 require APP_ROOT.join('app', 'helpers')
 
 require APP_ROOT.join('app/actions_routes', 'index')
+require APP_ROOT.join('app/actions_routes', 'instagram_auth')
 require APP_ROOT.join('app/actions_routes', 'artist')
-require APP_ROOT.join('app/actions_routes', 'event')
 require APP_ROOT.join('app/actions_routes', 'review')
