@@ -1,0 +1,51 @@
+@media screen and (min-width: 400px) {
+  #review_form {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 400px) and (min-width: 100px) {
+  #review_form {
+    width: 100%;
+  }
+}
+
+#review_form{
+  position: relative;
+  margin: 100px auto; 
+  padding: 20px;
+  // width: 450px; 
+  height: auto;
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 30px;
+  form {
+    margin: 0 auto;
+    text-align: center;
+    .form_fields {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      color: black;
+      label{
+         color: rgba(255,255,255,0.9);
+         font-size: 1.4em;
+         margin: 10px 0px 15px 0px;
+      }
+      input {
+        padding: 5px;
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+        font-family: 'helvetica neue';
+        background-color:(255,255,255,0.85)
+      }
+      textarea {
+        height: 125px;
+        width: 100%;
+        font-size: 1.2em;
+        font-family: 'helvetica neue';
+        resize: none;
+      }
+    }
+  }
+}

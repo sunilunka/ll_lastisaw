@@ -1,3 +1,16 @@
+@media screen and (min-width: 1135px) {
+  nav p {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1134px) {
+  nav p {
+    display: none;
+  }
+}
+
+
 @mixin globalfont {
   font-family: 'Gloria Hallelujah', cursive;
 }
@@ -28,14 +41,15 @@ nav {
   button {
     position: absolute;
     top: 15px;
-    right: 50px;
+    right: 30px;
   }
 
   p {
     position: absolute;
-    top: 15px;
-    right: 140px;
-    font-size: 1.1em;
+    top: 17px;
+    right: 120px;
+    font-size: 1.2em;
+    color: rgba(255,255,255,1)
 
   }
   div {
@@ -45,33 +59,3 @@ nav {
   }
 }
 
-
-
-  #review_form{
-  position: relative;
-  margin: 5% auto; 
-  padding: 20px;
-  width: 33%; 
-  height: auto;
-  background-color: rgba(0,0,0,0.75);
-  border-radius: 30px;
-  form {
-    margin: 0 auto;
-    text-align: center;
-    .form_fields {
-      position: relative;
-      display: block;
-      margin: 10px auto;
-      color: black;
-      label{
-         color: rgba(255,255,255,0.9);
-         font-size: 1.1em;
-      }
-      input {
-        padding: 5px;
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-}
