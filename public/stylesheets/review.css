@@ -1,0 +1,33 @@
+#review_form {
+  position: relative;
+  margin: 7.5% auto;
+  padding: 20px;
+  width: 450px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 30px; }
+  #review_form form {
+    margin: 0 auto;
+    text-align: center; }
+    #review_form form .form_fields {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      color: black; }
+      #review_form form .form_fields label {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.4em;
+        margin: 10px 0px 15px 0px; }
+      #review_form form .form_fields input {
+        padding: 5px;
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+        font-family: 'helvetica neue';
+        background-color: 255, 255, 255, 0.85; }
+      #review_form form .form_fields textarea {
+        height: 125px;
+        width: 100%;
+        font-size: 1.2em;
+        font-family: 'helvetica neue';
+        resize: none; }
