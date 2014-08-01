@@ -1,8 +1,13 @@
+@media screen and (min-width: 400px) {
+  #review_form {
+    width: 450px; } }
+@media screen and (max-width: 400px) and (min-width: 100px) {
+  #review_form {
+    width: 100%; } }
 #review_form {
   position: relative;
-  margin: 7.5% auto;
+  margin: 100px auto;
   padding: 20px;
-  width: 450px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 30px; }
