@@ -1,3 +1,9 @@
+@media screen and (min-width: 1135px) {
+  nav p {
+    display: block; } }
+@media screen and (max-width: 1134px) {
+  nav p {
+    display: none; } }
 nav {
   position: fixed;
   height: 60px;
@@ -19,12 +25,13 @@ nav {
   nav button {
     position: absolute;
     top: 15px;
-    right: 50px; }
+    right: 30px; }
   nav p {
     position: absolute;
-    top: 15px;
-    right: 140px;
-    font-size: 1.1em; }
+    top: 17px;
+    right: 120px;
+    font-size: 1.2em;
+    color: white; }
   nav div {
     clear: both;
     height: 1px;

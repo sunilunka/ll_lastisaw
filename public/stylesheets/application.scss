@@ -1,3 +1,16 @@
+@media screen and (min-width: 1135px) {
+  nav p {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1134px) {
+  nav p {
+    display: none;
+  }
+}
+
+
 @mixin globalfont {
   font-family: 'Gloria Hallelujah', cursive;
 }
@@ -28,14 +41,15 @@ nav {
   button {
     position: absolute;
     top: 15px;
-    right: 50px;
+    right: 30px;
   }
 
   p {
     position: absolute;
-    top: 15px;
-    right: 140px;
-    font-size: 1.1em;
+    top: 17px;
+    right: 120px;
+    font-size: 1.2em;
+    color: rgba(255,255,255,1)
 
   }
   div {
