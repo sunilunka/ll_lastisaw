@@ -1,25 +1,54 @@
 
-  <header>
-    <h3 id="header-title">LastISaw</h3>
-  </header>
 <div id="middle-banner">
   <h2>
     (Valuable) concert reviews by concertgoers (well, maybe a few by full-time music bloggers).
   </h2>
   <p>
     <a href="/oauth/connect"><img src="http://i.imgur.com/Y8Sl7Ks.png"></a>
-    <a href="/event/review/new" class="btn btn-primary btn-sm" role="button">Write a review</a>
+    <a href="/event/review/new" class="btn btn-primary btn-sm" role="button">Write a review >></a>
   </p>
 </div>
 
-<!--<section id="description-box">
+<section id="description-box">
   <header>
-    <h2>(Valuable) concert reviews by concertgoers (well, maybe a few by full-time music bloggers).</h2>
+    <h2>lorem hipsum enhanced impactful superstructure</h2>
   </header>
-</section>-->
 
-<% 3.times do |i| %>
-  <!--<div class="top-pics">
-    <img src="<%= @tags[i].images.standard_resolution.url %>">
+    <% @reviews.each do | review | %>
+      <div class="home-reviews">  
+        <h2><%= review.event.artist.name %></h2>
+      </div> 
+    <% end %>
+    
+    <% @reviews.each do | review | %> 
+      <div class="home-reviews">
+        <h3> <%= review.event.city_name %> </h3>
+      </div>
+    <% end %>
+    
+    <% @reviews.each do | review | %>
+      <div class="home-reviews">
+        <h4> <%= review.event.date.strftime("%a %-d %b %Y") %> </h4>
+      </div>
+    <% end %>
+
+    <% @reviews.each do | review | %>
+      <div class="home-reviews">
+        <p>
+          <%= review.review %>
+        </p>
+      </div>
+    <% end %>
+
+  <div class="event-pics">
+    <img src="<%= @tag1[0].images.standard_resolution.url %>">
   </div>
-<% end %>
+  <div class="event-pics">
+    <img src="<%= @tag2[0].images.standard_resolution.url %>">
+  </div>
+  <div class="event-pics">
+    <img src="<%= @tag3[0].images.standard_resolution.url %>">
+  </div>
+</section>
+
+

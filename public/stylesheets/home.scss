@@ -12,29 +12,6 @@ body {
   background-attachment: fixed;
 }
 
-header {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(186,71,100, 1);
-  text-align: center;
-  z-index: 100;
-  #header-title{
-    position: relative;
-    display: block; 
-    margin: 0 auto;
-    color: rgba(255,255,255, 0.75);
-    margin-top: 10px;
-
-
-  }
-  #header-title:hover {
-    color: rgba(255,255,255, 1); 
-  }
-}
-
 #middle-banner {
   position: relative;
   top: 250px;
@@ -55,13 +32,45 @@ header {
 #description-box {
   position: relative;
   display: block;
+  top: 470px;
   height: auto;
   width: 100%;
+  padding: 40px 0px 40px 0px;
   background-color: rgba(255,255,255,1);
   text-align: center;
   z-index: 10;
-
+  header {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
 }
+  
+  .home-reviews {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 32%; 
+    vertical-align: top;
+    word-wrap: break-word;
+    h2 {
+      margin-top: 10px;
+      padding-top: 40px;
+    }
+    h3 {
+      margin-top: 10px;
+    }
+    h4 {
+      margin-bottom: 30px;
+    }
+    p {
+      padding: 20px;
+      margin-bottom: 30px;
+      font-family: 'helvetica neue';
+      font-size: 1.3em;
+    }
+  }
+
 
 .event-pics {
   position: relative;
@@ -73,5 +82,4 @@ header {
     width: 100%;  
     border-radius: 100%;
   }
-
 }

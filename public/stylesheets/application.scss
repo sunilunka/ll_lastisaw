@@ -2,6 +2,29 @@
   font-family: 'Gloria Hallelujah', cursive;
 }
 
+nav {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(186,71,100, 1);
+  text-align: center;
+  z-index: 100;
+  #nav-title{
+    position: relative;
+    display: block; 
+    margin: 0 auto;
+    color: rgba(255,255,255, 0.75);
+    margin-top: 10px;
+
+
+  }
+  #nav-title:hover {
+    color: rgba(255,255,255, 1);
+    text-decoration: none; 
+  }
+}
 
 
 

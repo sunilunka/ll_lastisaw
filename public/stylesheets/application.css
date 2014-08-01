@@ -1,3 +1,22 @@
+nav {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #ba4764;
+  text-align: center;
+  z-index: 100; }
+  nav #nav-title {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 10px; }
+  nav #nav-title:hover {
+    color: white;
+    text-decoration: none; }
+
 #review_form {
   position: relative;
   margin: 5% auto;

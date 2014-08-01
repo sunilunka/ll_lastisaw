@@ -8,7 +8,15 @@ end
 
 get "/" do
   # Return a list of the most recent Instagram items (e.g.) #lollapalooza
-  @tags = Instagram.tag_recent_media('lollapalooza')
+  @reviews = Review.all.order(created_at: :desc).limit(3)
+
+  @artist1 = @reviews[0].event.artist.name.downcase.gsub(/[\W_]/,"")
+  @artist2 = @reviews[1].event.artist.name.downcase.gsub(/[\W_]/,"")
+  @artist3 = @reviews[2].event.artist.name.downcase.gsub(/[\W_]/,"")
+
+  @tag1 = Instagram.tag_recent_media("#{@artist1}")
+  @tag2 = Instagram.tag_recent_media("#{@artist2}")
+  @tag3 = Instagram.tag_recent_media("#{@artist3}")
   
   erb :index
 end
