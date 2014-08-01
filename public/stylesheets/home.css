@@ -2,10 +2,7 @@
 body {
   font-family: 'Gloria Hallelujah', cursive;
   background-image: url("../assets/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 #middle-banner {
   position: relative;
