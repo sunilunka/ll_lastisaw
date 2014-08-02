@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="/stylesheets/review.css">
   <link rel="stylesheet" href="/stylesheets/artist.css">
 
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
 
@@ -31,9 +30,11 @@
     <a href="/"><h3 id="nav-title">LastISaw</h3></a>
     <% if current_user %>
       <form method="post" action="/logout">
-        <button class="btn btn-primary">Logout</button>
+        <button class="btn btn-social btn-instagram">Logout</button>
       </form>
       <p>Logged in as <%= User.find(current_user.id).insta_username %></p>
+    <% else %>
+      <a href="/oauth/connect" class="btn btn-social btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-lg']);"><i class="fa fa-instagram"></i>Sign in with Instagram</a>
     <% end %>
   </nav>
 
