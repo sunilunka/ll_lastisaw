@@ -34,7 +34,7 @@
       </form>
       <p>Logged in as <%= User.find(current_user.id).insta_username %></p>
     <% else %>
-      <a href="/oauth/connect" class="btn btn-social btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-lg']);"><i class="fa fa-instagram"></i>Sign in with Instagram</a>
+      <a href="/oauth/connect" id="login_nav" class="btn btn-social btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-lg']);"><i class="fa fa-instagram"></i>Sign in with Instagram</a>
     <% end %>
   </nav>
 
