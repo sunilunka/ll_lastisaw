@@ -1,5 +1,5 @@
 <section id="review_form">
-  <form method="post" action="/review/new">
+  <form id="review_text_area" method="post" action="/review/new">
     <div class="form_fields">
       <label>Artist (e.g. New Order)</label><br>
       <input type="text" name="artist" required>
@@ -14,7 +14,7 @@
     </div>
     <div class="form_fields">
       <label>Review</label><br>
-      <textarea type="text" name="review" form="" required></textarea>
+      <textarea type="text" name="review" form="review_text_area" required></textarea>
     </div>
       <input class="btn btn-primary" type="submit" name="submit" value="Post it!" >
     </form>
