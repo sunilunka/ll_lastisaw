@@ -30,7 +30,7 @@
     <a href="/"><h3 id="nav-title">LastISaw</h3></a>
     <% if current_user %>
       <form method="post" action="/logout">
-        <button class="btn btn-social btn-instagram">Logout</button>
+        <button id="insta_logout" class="btn btn-social btn-instagram">Logout</button>
       </form>
       <p>Logged in as <%= User.find(current_user.id).insta_username %></p>
     <% else %>

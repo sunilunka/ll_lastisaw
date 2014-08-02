@@ -22,7 +22,12 @@ nav {
   nav #nav-title:hover {
     color: white;
     text-decoration: none; }
-  nav button {
+  nav #insta_logout {
+    position: absolute;
+    padding-left: 15px;
+    top: 15px;
+    right: 30px; }
+  nav #login-nav {
     position: absolute;
     top: 15px;
     right: 30px; }
