@@ -18,6 +18,8 @@ body {
     margin: 0 auto; }
   #middle-banner p {
     margin-top: 35px; }
+    #middle-banner p #add_review {
+      padding-left: 20px; }
 
 #description-box {
   position: relative;
