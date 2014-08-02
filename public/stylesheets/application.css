@@ -37,7 +37,31 @@ nav {
     right: 120px;
     font-size: 1.2em;
     color: white; }
-  nav div {
-    clear: both;
-    height: 1px;
-    width: 100%; }
+  nav #artist_search {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 220px; }
+    nav #artist_search input {
+      position: relative;
+      display: inline-block;
+      height: 32px;
+      padding-left: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      border: none;
+      width: 182px;
+      border-radius: 4px;
+      line-height: normal; }
+    nav #artist_search #search_button {
+      position: relative;
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+      vertical-align: top;
+      background-color: #3f729b;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: white;
+      border-color: rgba(0, 0, 0, 0.2); }
+    nav #artist_search #search_button:hover {
+      background-color: #335d7e; }

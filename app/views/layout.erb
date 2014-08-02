@@ -27,6 +27,10 @@
 </head>
 <body>
   <nav>
+    <form id="artist_search" method="get" action="/artist/search">
+      <input type="text" class="" name="artist_search_term" placeholder="Search">
+      <button id="search_button" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+    </form>
     <a href="/"><h3 id="nav-title">LastISaw</h3></a>
     <% if current_user %>
       <form method="post" action="/logout">

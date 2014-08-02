@@ -45,7 +45,7 @@ nav {
     right: 30px;
   }
 
-  #login-nav {
+  #login_nav {
     position: absolute;
     top: 15px;
     right: 30px;
@@ -59,10 +59,40 @@ nav {
     color: rgba(255,255,255,1)
 
   }
-  div {
-    clear:both;
-    height: 1px;
-    width: 100%;
+
+  #artist_search {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 220px;
+    input {
+      position: relative;
+      display: inline-block;
+      height: 32px;
+      padding-left: 10px;
+      background-color: rgba(255,255,255, 0.75);
+      border: none;
+      width: 182px;
+      border-radius: 4px;
+      line-height: normal;
+    }
+    #search_button {
+      position: relative;
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+      vertical-align: top;
+      background-color: #3f729b; 
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: white;
+      border-color: rgba(0,0,0,0.2)
+    }
+
+    #search_button:hover {
+      background-color: #335d7e;
+    }
+
   }
 }
 
