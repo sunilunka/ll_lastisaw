@@ -6,4 +6,12 @@ class Event < ActiveRecord::Base
   # Associations
   belongs_to :artist
   has_many :reviews
+
+  # Date cannot be in the future
+  validate :date_cannot_be_in_the_future
+  def date_cannot_be_in_the_future
+    if date > Date.today
+      error.add(:date, "can't be in the future")
+    end
+  end
 end
