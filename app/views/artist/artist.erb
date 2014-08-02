@@ -1,28 +1,34 @@
 <div id="artist_bg">
 </div>
+
 <h1 class="artist-title"><%= @artist.name %></h1>
-<% 3.times do |i| %>
-  <div class="artist-pic">
-    <img src="<%= @tags[i].images.standard_resolution.url %>">
-  </div>
-<% end %>
 
-<% @events.each do |event| %>
-  <div>
-    <div class="artist">
-      <h2><%= event.city_name %></h2>
-      <h4><%= event.date.strftime("%a %-d %b %Y") %></h4>
-      <% event.reviews.order(created_at: :desc).each do |r| %>
-        <div>
-          <h5><%= r.review %></h5>
-          <small>Posted by <%= if r.user
-                                 r.user.insta_username
-                               else
-                                 "Anonymous"
-                               end %> at <%= r.created_at.localtime.strftime("%l:%M%P") %> on <%= r.created_at.localtime.strftime("%a %-d %b %Y") %></small>
-        </div>
-      <% end %>
-
+<div id="artist-images">
+  <% 3.times do |i| %>
+    <div class="artist-pic">
+      <img src="<%= @tags[i].images.standard_resolution.url %>">
     </div>
-  </div>
-<% end %>
+  <% end %>
+  <div class="clearfix"></div>
+</div>
+
+
+  <% @events.each do |event| %>
+    <div class="artist-event">
+      <div class="artist">
+        <h2><%= event.city_name %></h2>
+        <h4><%= event.date.strftime("%a %-d %b %Y") %></h4>
+        <% event.reviews.order(created_at: :desc).each do |r| %>
+          <div class='artist-review'>
+            <p><%= r.review %></p>
+            <small>Posted by <%= if r.user
+                                   r.user.insta_username
+                                 else
+                                   "Anonymous"
+                                 end %> at <%= r.created_at.localtime.strftime("%l:%M%P") %> on <%= r.created_at.localtime.strftime("%a %-d %b %Y") %></small>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  <% end %>

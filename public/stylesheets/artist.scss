@@ -6,6 +6,17 @@
   background-color: rgba(255,255,255,0.95)
 }
 
+#artist-images {
+  position: relative;
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  .clearfix {
+    clear: both;
+    height: 2px;
+  }
+}
+
   
 .artist-title {
   position: relative;
@@ -16,13 +27,33 @@
 }
 
 .artist-pic {
-   position: relative;
-   display: inline-block;
+   float: left;
    width: 33%;
    text-align: center;
   img {
     height: auto;
-    width: 50%;
+    width: 100%;
     border-radius: 100%;
-  }   
+  }
+}
+
+.artist-event {
+  position: relative;
+  margin: 50px auto 50px auto;
+  height: auto;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.75);
+  .artist-review {
+    width: 49%;
+    display: inline-block;
+    padding: 30px;
+    p {
+      vertical-align: super;
+      font-size: 1.2em;
+      font-family: 'helvetica neue';
+      word-wrap: break-word;
+    }
+  }
 }
