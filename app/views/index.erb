@@ -7,10 +7,10 @@
   </h2>
   <p>
     <% if current_user %>
-      <a href="review/new" id="add_review" class="btn btn-social btn-lg btn-instagram" role="button">Write a review >></a>
+      <a href="/review/new" id="add_review" class="btn btn-social btn-lg btn-instagram" role="button">Write a review >></a>
     <% else %>
       <a href="/oauth/connect" class="btn btn-social btn-lg btn-instagram" id="instagram_button" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-lg']);"><i class="fa fa-instagram"></i>Sign in with Instagram</a>
-      <a href="review/new" id="add_review" class="btn btn-social btn-lg btn-instagram" role="button">Write a review >></a>
+      <a href="/review/new" id="add_review" class="btn btn-social btn-lg btn-instagram" role="button">Write a review >></a>
     <% end %>
   </p>
 </div>
@@ -20,37 +20,35 @@
     <h2>(Valuable) show reviews by concertgoers (well, maybe a few by full-time music bloggers).</h2>
   </header>
 
-    <% @reviews.each do | review | %>
-      <div class="home-reviews">  
-        <a href="/artist/<%= review.event.artist.id %>"><h2><%= review.event.artist.name %></h2></a>
-      </div> 
-    <% end %>
-    
-    <% @reviews.each do | review | %> 
-      <div class="home-reviews">
-        <h3> <%= review.event.city_name %> </h3>
-      </div>
-    <% end %>
-    
-    <% @reviews.each do | review | %>
-      <div class="home-reviews">
-        <h4> <%= review.event.date.strftime("%a %-d %b %Y") %> </h4>
-      </div>
-    <% end %>
+  <% @reviews.each do | review | %>
+    <div class="home-reviews">  
+      <a href="/artist/<%= review.event.artist.id %>"><h2><%= review.event.artist.name %></h2></a>
+    </div> 
+  <% end %>
 
-    <% @reviews.each do | review | %>
-      <div class="home-reviews">
-        <p>
-          <%= review.review %>
-        </p>
-      </div>
-    <% end %>
+  <% @reviews.each do | review | %> 
+    <div class="home-reviews">
+      <h3> <%= review.event.city_name %> </h3>
+    </div>
+  <% end %>
 
-    <% @tags.each do |t| %>
-      <div class="event-pics">
-        <img src="<%= t.first.images.standard_resolution.url %>">
-      </div>
-    <% end %>
+  <% @reviews.each do | review | %>
+    <div class="home-reviews">
+      <h4> <%= review.event.date.strftime("%a %-d %b %Y") %> </h4>
+    </div>
+  <% end %>
+
+  <% @reviews.each do | review | %>
+    <div class="home-reviews">
+      <p>
+        <%= review.review %>
+      </p>
+    </div>
+  <% end %>
+
+  <% @tags.each do |t| %>
+    <div class="event-pics">
+      <img src="<%= t.first.images.standard_resolution.url %>">
+    </div>
+  <% end %>
 </section>
-
-
