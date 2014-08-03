@@ -2,7 +2,7 @@
   <form id="review_text_area" method="post" action="/review/new">
     <div class="form_fields">
       <label>Artist (e.g. New Order)</label><br>
-      <input type="text" name="artist" required>
+      <input type="text" name="artist" value="<%= @artist.name if @artist %>" required>
     </div>
     <div class="form_fields">
       <label>City/Event (e.g. Vancouver,<br> Squamish Valley Music Festival)</label><br>
