@@ -22,7 +22,7 @@
 
     <% @reviews.each do | review | %>
       <div class="home-reviews">  
-        <h2><%= review.event.artist.name %></h2>
+        <a href="/artist/<%= review.event.artist.id %>"><h2><%= review.event.artist.name %></h2></a>
       </div> 
     <% end %>
     
