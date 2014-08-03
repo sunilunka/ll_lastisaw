@@ -1,6 +1,11 @@
 get '/artist/search' do
   @artist = Artist.find_by(name: params[:artist_search_term])
-  redirect "/artist/#{@artist.id}"
+  
+  if @artist
+    redirect "/artist/#{@artist.id}"
+  else 
+    redirect '/not_found'
+  end
 end
 
 get '/artist/:id' do
