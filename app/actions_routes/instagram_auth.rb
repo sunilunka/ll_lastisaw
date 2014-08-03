@@ -28,7 +28,7 @@ get "/oauth/callback" do
       puts b
     end
   end
-  redirect "/"
+  redirect request.referrer
 end
 
 post "/logout" do

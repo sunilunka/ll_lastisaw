@@ -4,8 +4,8 @@ get '/review/new' do
 end
 
 post '/review/new' do
-  find_artist = Artist.find_by(name: params[:artist])
-  find_event = Event.find_by(date: params[:date], city_name: params[:city_name])
+  find_artist = Artist.find_by(name: params[:artist].upcase)
+  find_event = Event.find_by(date: params[:date], city_name: params[:city_name], artist_id: find_artist.id) if find_artist
 
   if find_artist
     if find_event
@@ -35,7 +35,7 @@ post '/review/new' do
     end
   else
     @artist = Artist.create(
-      name: params[:artist]
+      name: params[:artist].upcase
     )
 
     @event = Event.create(
