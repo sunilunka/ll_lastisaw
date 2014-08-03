@@ -1,2 +1,4 @@
+*.sqlite3
 *.lock
 *.DS_Store
+*.scssc

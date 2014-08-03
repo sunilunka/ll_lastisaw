@@ -1,5 +1,5 @@
 get '/artist/search' do
-  @artist = Artist.find_by(name: params[:artist_search_term])
+  @artist = Artist.find_by(name: params[:artist_search_term].upcase)
   
   if @artist
     redirect "/artist/#{@artist.id}"
