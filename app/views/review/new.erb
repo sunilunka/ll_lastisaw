@@ -1,3 +1,14 @@
+<% if @event && @event.errors.any?%>
+  <div id="error">
+    <h3>Uh oh...looks like you tried to go back to the future!</h3>
+    <ul>
+      <% @event.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <section id="review_form">
   <form id="review_text_area" method="post" action="/review/new">
     <div class="form_fields">

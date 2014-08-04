@@ -11,7 +11,7 @@ class Event < ActiveRecord::Base
   validate :date_cannot_be_in_the_future
   def date_cannot_be_in_the_future
     if date > Date.today
-      error.add(:date, "can't be in the future")
+      errors.add(:date, "can't be in the future")
     end
   end
 end
