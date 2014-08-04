@@ -1,6 +1,6 @@
-<% if @event && @event.errors.any?%>
+<% if @event && @event.errors.any? %>
   <div id="error">
-    <h3>Uh oh...looks like you tried to go back to the future!</h3>
+    <h3>Uh oh, it looks like you tried to go back to the future.</h3>
     <ul>
       <% @event.errors.full_messages.each do |error| %>
         <li><%= error %></li>

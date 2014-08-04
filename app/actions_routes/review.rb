@@ -1,6 +1,6 @@
 get '/review/new' do
   @event = Event.new
-  @review = Review.new
+  # @review = Review.new
   erb :'/review/new'
 end
 
@@ -32,6 +32,7 @@ post '/review/new' do
         )
         @review.user_id = current_user.id if current_user
         @review.save
+
         redirect "/artist/#{find_artist.id}"
       else
         erb :'/review/new'
@@ -43,7 +44,6 @@ post '/review/new' do
     )
 
     if @artist.save
-
       @event = Event.new(
         date: params[:date],
         city_name: params[:city_name],
@@ -51,7 +51,6 @@ post '/review/new' do
       )
 
       if @event.save
-
         @review = Review.new(
           event_id: @event.id,
           review: params[:review],
