@@ -21,3 +21,4 @@ end
 gem 'instagram'
 
 gem 'faker'
+gem 'sass'

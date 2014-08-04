@@ -9,15 +9,23 @@ get '/artist/search' do
 end
 
 get '/artist/:id' do
-  @artist = Artist.find(params[:id])
-  @events = @artist.events.order(date: :desc)
-  @tags = Instagram.tag_recent_media("#{@artist.name.downcase.gsub(/[\W_]/,"")}")
-  erb :'/artist/artist'
+  begin
+    @artist = Artist.find(params[:id])
+    @events = @artist.events.order(date: :desc)
+    @tags = Instagram.tag_recent_media("#{@artist.name.downcase.gsub(/[\W_]/,"")}")
+    erb :'/artist/artist'
+  rescue
+    redirect '/not_found'
+  end
 end
 
 get '/artist/:id/review/new' do
-  @artist = Artist.find(params[:id])
-  @event = Event.new
-  # @review = Review.new
-  erb :'/review/new'
+  begin
+    @artist = Artist.find(params[:id])
+    @event = Event.new
+    # @review = Review.new
+    erb :'/review/new'
+  rescue
+    redirect '/not_found'
+  end
 end

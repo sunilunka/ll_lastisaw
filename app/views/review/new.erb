@@ -17,7 +17,7 @@
     </div>
     <div class="form_fields">
       <label>City/Event (e.g. Vancouver,<br> Squamish Valley Music Festival)</label><br>
-      <input type="text" name="city_name" required>
+      <input type="text" name="city_name" value="<%= @event.city_name if @event %>" required>
     </div>
     <div class="form_fields">
       <label>Date</label><br>
@@ -25,7 +25,7 @@
     </div>
     <div class="form_fields">
       <label>Review</label><br>
-      <textarea type="text" name="review" form="review_text_area" required></textarea>
+      <textarea type="text" name="review" form="review_text_area" maxlength="140" required><%= @review.review if @review %></textarea>
     </div>
       <input class="btn btn-primary" type="submit" name="submit" value="Post it!" >
     </form>

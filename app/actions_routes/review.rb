@@ -35,6 +35,8 @@ post '/review/new' do
 
         redirect "/artist/#{find_artist.id}"
       else
+        @artist = find_artist
+        @review = Review.new(review: params[:review])
         erb :'/review/new'
       end
     end
@@ -59,11 +61,13 @@ post '/review/new' do
         @review.save
 
         redirect "/artist/#{@artist.id}"
-      else 
+      else
+        @artist = Artist.new(
+          name: params[:artist].upcase
+        )
+        @review = Review.new(review: params[:review])
         erb :'/review/new'
       end
-    else
-      erb :'/review/new'
     end
   end
 end
