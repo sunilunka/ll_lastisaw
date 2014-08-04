@@ -17,6 +17,7 @@ end
 
 get '/artist/:id/review/new' do
   @artist = Artist.find(params[:id])
+  @event = Event.new
   @review = Review.new
   erb :'/review/new'
 end

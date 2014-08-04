@@ -10,11 +10,35 @@
   }
 }
 
+
+#error {
+  position: relative;
+  background-color: rgba(255,13,20,0.5);
+  height: auto;
+  width: 450px;
+  margin: 100px auto;
+  border-radius: 20px;
+  color: rgba(255,255,255, 0.80);
+  text-align: center;
+  h3 {
+      padding: 20px 20px 0px 20px;
+      margin-bottom: 0px;
+  }
+  ul {
+    position: relative; 
+    width: 90%;
+    padding: 20px;
+    margin-top: 0px;
+    text-align: left;
+    list-style-position: inside;
+    font-size: 1.3em;
+  }
+}
+
 #review_form{
   position: relative;
   margin: 100px auto; 
   padding: 20px;
-  // width: 450px; 
   height: auto;
   background-color: rgba(0,0,0,0.75);
   border-radius: 30px;

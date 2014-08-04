@@ -4,6 +4,27 @@
 @media screen and (max-width: 400px) and (min-width: 100px) {
   #review_form {
     width: 100%; } }
+#error {
+  position: relative;
+  background-color: rgba(255, 13, 20, 0.5);
+  height: auto;
+  width: 450px;
+  margin: 100px auto;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center; }
+  #error h3 {
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 0px; }
+  #error ul {
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    margin-top: 0px;
+    text-align: left;
+    list-style-position: inside;
+    font-size: 1.3em; }
+
 #review_form {
   position: relative;
   margin: 100px auto;
