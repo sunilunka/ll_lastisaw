@@ -16,8 +16,8 @@ Instagram.configure do |config|
   config.client_secret = "b44a0e786426401e97d54e92519f0f28"
 end
 
-require 'faker'
-require 'pry'
+require 'faker' if development?
+require 'pry' if development?
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
